@@ -2,11 +2,16 @@
 # This way, we keep these methods separated from other potential parts of the program
 
 def find(id)
-    # Your code Here
+   candidates.each do |id| 
+    puts "{candidate}{id}"
+   else 
+    nil 
   end
   
   def experienced?(candidate)
-    # Your code Here
+    candidatesExp = @candidates.select { |candidate| candidate[:years_of_experience] >= 2 }
+    candidatesExp.each do |candidate| 
+        puts "Canadidate ID: #{candidate[:id]} has #{candidate[:years_of_experience]} years of experience" 
   end
   
   def qualified_candidates(candidates)
