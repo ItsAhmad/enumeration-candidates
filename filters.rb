@@ -15,7 +15,15 @@ def find(id)
   end
   
   def qualified_candidates(candidates)
-    # Your code Here
-  end
-  
+    candidates.select do |candidate|
+      candidate[:years_of_experience] >= 2 &&
+      candidate[:github_points] >= 100 && 
+      (candidate[:languages].include?('Ruby') || candidate[:languages].include?('Python')) &&
+       candidate[:date_applied] >= 15.days.ago.to_date &&
+       candidate[:age] > 17
+    end
+  end 
   # More methods will go below
+def ordered_by_qualifications(candidates) 
+
+end 
